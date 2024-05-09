@@ -44,6 +44,30 @@ const Navbar = () => {
     },
   };
 
+  const listVariants = {
+    closed: {
+      x: "100vw",
+    },
+    opened: {
+      x: 0,
+      transition: {
+        when: "beforeChildren", // untuk memastikan parent-nya gerak dulu, baru anaknya yang gerak
+        staggerChildren: 0.2, // ini akan secara otomatis efek ke childrennya sehingga childrennya gak perlu di kasih attibut animate tag <motion.div /> nya. Ini juga akan kasih jeda 0.2s sebelum anaknya gerak
+      },
+    },
+  };
+
+  const listItemVariants = {
+    closed: {
+      x: -10,
+      opacity: 0,
+    },
+    opened: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <div className=" flex h-full items-center justify-between px-4 text-lg sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* Desktop Links */}
@@ -98,7 +122,7 @@ const Navbar = () => {
           <motion.div
             variants={topVariants}
             animate={open ? "opened" : "closed"}
-            className=" h-1 w-10 rounded bg-black"
+            className=" h-1 w-10 origin-left rounded bg-black"
           ></motion.div>
           <motion.div
             variants={centerVariants}
@@ -108,19 +132,24 @@ const Navbar = () => {
           <motion.div
             variants={bottomVariants}
             animate={open ? "opened" : "closed"}
-            className=" h-1 w-10 rounded bg-black"
+            className=" h-1 w-10 origin-left rounded bg-black"
           ></motion.div>
         </button>
 
         {/* Menu List */}
         {open && (
-          <div className=" absolute left-0 top-0 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-black text-4xl text-white">
+          <motion.div
+            variants={listVariants}
+            initial="closed"
+            animate="opened"
+            className=" absolute left-0 top-0 z-40 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-black text-4xl text-white"
+          >
             {links.map((link, index) => (
-              <Link href={link.url} key={index}>
-                {link.title}
-              </Link>
+              <motion.div variants={listItemVariants} key={index}>
+                <Link href={link.url}>{link.title}</Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
