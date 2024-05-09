@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./navLink";
+import { motion } from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
@@ -13,6 +14,36 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const topVariants = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: 45,
+      backgroundColor: "rgb(255,255,255)",
+    },
+  };
+
+  const centerVariants = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+
+  const bottomVariants = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: -45,
+      backgroundColor: "rgb(255,255,255)",
+    },
+  };
+
   return (
     <div className=" flex h-full items-center justify-between px-4 text-lg sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* Desktop Links */}
@@ -64,9 +95,21 @@ const Navbar = () => {
           className=" relative  z-50 flex h-8 w-10 flex-col justify-between"
           onClick={() => setOpen(() => !open)}
         >
-          <div className=" h-1 w-10 rounded bg-white"></div>
-          <div className=" h-1 w-10 rounded bg-white"></div>
-          <div className=" h-1 w-10 rounded bg-white"></div>
+          <motion.div
+            variants={topVariants}
+            animate={open ? "opened" : "closed"}
+            className=" h-1 w-10 rounded bg-black"
+          ></motion.div>
+          <motion.div
+            variants={centerVariants}
+            animate={open ? "opened" : "closed"}
+            className=" h-1 w-10 rounded bg-black"
+          ></motion.div>
+          <motion.div
+            variants={bottomVariants}
+            animate={open ? "opened" : "closed"}
+            className=" h-1 w-10 rounded bg-black"
+          ></motion.div>
         </button>
 
         {/* Menu List */}
