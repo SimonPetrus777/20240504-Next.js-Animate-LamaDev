@@ -151,7 +151,97 @@ const AboutPage = () => {
             </svg>
           </div>
           {/* EXPERIENCE CONTAINER */}
-          <div className="">EXPERIENCE</div>
+          <div className=" flex flex-col justify-center gap-12 pb-48">
+            {/* EXPERIENCE TITLE */}
+            <h1 className=" text-2xl font-bold">EXPERIENCE</h1>
+
+            {/* EXPERIENCE LIST */}
+            <div className="">
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="">
+                {/* LEFT */}
+                <div className=" ">
+                  {/* JOB TITLE */}
+                  <div className="">Senior JavaScript Engineer</div>
+                  {/* JOB DESC */}
+                  <div className="">
+                    I led web development, offering expertise in JavaScript
+                    frameworks.
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="">2024 - Present</div>
+                  {/* JOB COMPANY */}
+                  <div className="">Apple</div>
+                </div>
+                {/* CENTER */}
+                <div className="">
+                  {/* LINE */}
+                  <div className="">
+                    {/* LINE CIRCLE */}
+                    <div className=""></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className=""></div>
+              </div>
+
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="">
+                {/* LEFT */}
+                <div className=""></div>
+                {/* CENTER */}
+                <div className="">
+                  {/* LINE */}
+                  <div className="">
+                    {/* LINE CIRCLE */}
+                    <div className=""></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="">
+                  {/* JOB TITLE */}
+                  <div className="">Senior React Developer</div>
+                  {/* JOB DESC */}
+                  <div className="">
+                    I spearheaded React-based application development,
+                    leveraging advanced skills.{" "}
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="">2019 - 2024</div>
+                  {/* JOB COMPANY */}
+                  <div className="">Microsoft</div>
+                </div>
+              </div>
+
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="">
+                {/* LEFT */}
+                <div className="">
+                  {/* JOB TITLE */}
+                  <div className="">Freelancer</div>
+                  {/* JOB DESC */}
+                  <div className="">
+                    I provided web solutions, applying a range of technologies
+                    to address client requirements.{" "}
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="">2010 - 2019</div>
+                  {/* JOB COMPANY */}
+                  <div className="">Microsoft</div>
+                </div>
+                {/* CENTER */}
+                <div className="">
+                  {/* LINE */}
+                  <div className="">
+                    {/* LINE CIRCLE */}
+                    <div className=""></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className=""></div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* SVG CONTAINER */}
         <div className="hidden"></div>
