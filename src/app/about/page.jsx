@@ -6,7 +6,7 @@ import { useRef } from "react";
 const AboutPage = () => {
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({ container: containerRef });
-  // console.log(scrollYProgress);
+  // console.log(scrollYProgress); // angkanya antara 0-1
 
   return (
     <motion.div
