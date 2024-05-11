@@ -1,7 +1,13 @@
 "use client";
-import { motion } from "framer-motion";
+import Brain from "@/components/brain";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 const AboutPage = () => {
+  const containerRef = useRef();
+  const { scrollYProgress } = useScroll({ container: containerRef });
+  // console.log(scrollYProgress);
+
   return (
     <motion.div
       className=" h-full"
@@ -10,9 +16,9 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="">
+      <div className=" h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className=" flex flex-col gap-24 p-4 sm:p-8 md:gap-32 md:p-12 lg:gap-48 lg:p-20 xl:gap-64 xl:p-48">
+        <div className=" flex flex-col gap-24 p-4 sm:p-8 md:gap-32 md:p-12 lg:w-2/3 lg:gap-48  lg:p-20 lg:pr-0 xl:w-1/2 xl:gap-64 xl:p-48">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col justify-center gap-12">
             {/* BIOGRAPHY TITLE */}
@@ -158,93 +164,113 @@ const AboutPage = () => {
             {/* EXPERIENCE LIST */}
             <div className="">
               {/* EXPERIENCE LIST ITEM */}
-              <div className="">
+              <div className=" flex h-48 justify-between">
                 {/* LEFT */}
-                <div className=" ">
+                <div className=" w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="">Senior JavaScript Engineer</div>
+                  <div className=" rounded-b-lg rounded-s-lg bg-white p-3 font-semibold">
+                    Senior JavaScript Engineer
+                  </div>
                   {/* JOB DESC */}
-                  <div className="">
+                  <div className="p-3 text-sm italic">
                     I led web development, offering expertise in JavaScript
                     frameworks.
                   </div>
                   {/* JOB DATE */}
-                  <div className="">2024 - Present</div>
+                  <div className="p-3 text-sm font-semibold text-red-400">
+                    2024 - Present
+                  </div>
                   {/* JOB COMPANY */}
-                  <div className="">Apple</div>
+                  <div className=" w-fit   rounded bg-white p-1 text-sm font-semibold">
+                    Apple
+                  </div>
                 </div>
                 {/* CENTER */}
-                <div className="">
+                <div className="flex w-1/6 justify-center">
                   {/* LINE */}
-                  <div className="">
+                  <div className=" relative h-full w-1 rounded bg-gray-600">
                     {/* LINE CIRCLE */}
-                    <div className=""></div>
+                    <div className=" absolute -left-2 h-5 w-5 rounded-full bg-white ring-4 ring-red-400"></div>
                   </div>
                 </div>
                 {/* RIGHT */}
-                <div className=""></div>
+                <div className=" w-1/3 "></div>
               </div>
 
               {/* EXPERIENCE LIST ITEM */}
-              <div className="">
+              <div className="flex h-48 justify-between">
                 {/* LEFT */}
-                <div className=""></div>
+                <div className="w-1/3 "></div>
                 {/* CENTER */}
-                <div className="">
+                <div className="flex w-1/6 justify-center">
                   {/* LINE */}
-                  <div className="">
+                  <div className=" relative h-full w-1 rounded bg-gray-600">
                     {/* LINE CIRCLE */}
-                    <div className=""></div>
+                    <div className=" absolute -left-2 h-5 w-5 rounded-full bg-white ring-4 ring-red-400"></div>
                   </div>
                 </div>
                 {/* RIGHT */}
-                <div className="">
+                <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="">Senior React Developer</div>
+                  <div className="rounded-b-lg rounded-s-lg bg-white p-3 font-semibold">
+                    Senior React Developer
+                  </div>
                   {/* JOB DESC */}
-                  <div className="">
+                  <div className="p-3 text-sm italic">
                     I spearheaded React-based application development,
-                    leveraging advanced skills.{" "}
+                    leveraging advanced skills.
                   </div>
                   {/* JOB DATE */}
-                  <div className="">2019 - 2024</div>
+                  <div className="p-3 text-sm font-semibold text-red-400">
+                    2019 - 2024
+                  </div>
                   {/* JOB COMPANY */}
-                  <div className="">Microsoft</div>
+                  <div className="w-fit   rounded bg-white p-1 text-sm font-semibold">
+                    Microsoft
+                  </div>
                 </div>
               </div>
 
               {/* EXPERIENCE LIST ITEM */}
-              <div className="">
+              <div className="flex h-48 justify-between">
                 {/* LEFT */}
-                <div className="">
+                <div className="w-1/3">
                   {/* JOB TITLE */}
-                  <div className="">Freelancer</div>
+                  <div className="rounded-b-lg rounded-s-lg bg-white p-3 font-semibold">
+                    Freelancer
+                  </div>
                   {/* JOB DESC */}
-                  <div className="">
+                  <div className="p-3 text-sm italic">
                     I provided web solutions, applying a range of technologies
                     to address client requirements.{" "}
                   </div>
                   {/* JOB DATE */}
-                  <div className="">2010 - 2019</div>
+                  <div className="p-3 text-sm font-semibold text-red-400">
+                    2010 - 2019
+                  </div>
                   {/* JOB COMPANY */}
-                  <div className="">Microsoft</div>
+                  <div className="w-fit   rounded bg-white p-1 text-sm font-semibold">
+                    Microsoft
+                  </div>
                 </div>
                 {/* CENTER */}
-                <div className="">
+                <div className="flex w-1/6 justify-center">
                   {/* LINE */}
-                  <div className="">
+                  <div className="relative h-full w-1 rounded bg-gray-600">
                     {/* LINE CIRCLE */}
-                    <div className=""></div>
+                    <div className="absolute -left-2 h-5 w-5 rounded-full bg-white ring-4 ring-red-400"></div>
                   </div>
                 </div>
                 {/* RIGHT */}
-                <div className=""></div>
+                <div className="w-1/3"></div>
               </div>
             </div>
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden"></div>
+        <div className="sticky top-0 z-30 hidden w-1/3 lg:block xl:w-1/2">
+          <Brain scrollYProgress={scrollYProgress} />
+        </div>
       </div>
     </motion.div>
   );
