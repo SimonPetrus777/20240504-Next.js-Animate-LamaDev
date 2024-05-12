@@ -48,7 +48,7 @@ const ContactPage = () => {
     >
       <div className="flex h-full flex-col px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
-        <div className=" flex h-1/2 items-center justify-center text-6xl lg:h-full lg:w-1/2">
+        <div className=" flex h-1/6 items-center justify-center text-6xl lg:h-full lg:w-1/2">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -72,9 +72,9 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="flex h-1/2 flex-col  justify-center gap-8 rounded-xl bg-red-50 p-24 text-xl lg:h-full lg:w-1/2"
+          className="flex h-5/6 flex-col  justify-center gap-8 rounded-xl bg-red-50 p-24 text-xl lg:h-full lg:w-1/2"
         >
-          <span>Dear Lama Dev,</span>
+          <span>Dear Simon,</span>
           <textarea
             rows={6}
             className=" resize-none border-b-2 border-b-black bg-transparent outline-none"
