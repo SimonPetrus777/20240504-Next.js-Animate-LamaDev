@@ -48,7 +48,7 @@ const ContactPage = () => {
     >
       <div className="flex h-full flex-col px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
-        <div className=" flex h-1/6 items-center justify-center text-6xl lg:h-full lg:w-1/2">
+        <div className=" mb-8 flex items-center justify-center text-lg lg:mb-0 lg:h-full lg:w-1/2 lg:text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -72,22 +72,23 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="flex h-5/6 flex-col  justify-center gap-8 rounded-xl bg-red-50 p-24 text-xl lg:h-full lg:w-1/2"
+          className="flex  flex-col  justify-center rounded-xl bg-red-50 p-5 text-xl lg:h-full lg:w-1/2 lg:p-14"
         >
-          <span>Dear Simon,</span>
+          <span className="mb-2 font-semibold">Your Message:</span>
           <textarea
-            rows={6}
-            className=" resize-none border-b-2 border-b-black bg-transparent outline-none"
+            className=" mb-5 h-36 resize-none rounded-md p-2 outline-none"
             name="user_message"
+            required
           />
-          <span>My email address</span>
+          <span className=" mb-2 font-semibold">Your Email Address:</span>
           <input
-            type="text"
-            className=" border-b-2 border-b-black bg-transparent outline-none"
+            type="email"
+            className="mb-10 h-10 rounded  p-2 outline-none"
             name="user_email"
+            required
           />
-          <span>Regards</span>
-          <button className=" rounded bg-purple-200 p-4 font-semibold text-gray-600">
+
+          <button className="mb-4 rounded bg-purple-200 p-4 font-semibold text-gray-600">
             Send
           </button>
           {success && (
