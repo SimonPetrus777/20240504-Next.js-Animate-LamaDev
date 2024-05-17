@@ -83,9 +83,9 @@ const Navbar = () => {
           href="/"
           className=" flex items-center rounded-md bg-black p-1 text-sm font-semibold"
         >
-          <span className=" mr-1 text-white">Lama</span>
+          <span className=" mr-1 text-white">Simon</span>
           <span className=" flex  h-8 w-12 items-center justify-center bg-white text-black">
-            .dev
+            Test
           </span>
         </Link>
       </div>
