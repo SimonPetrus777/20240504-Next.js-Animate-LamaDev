@@ -17,17 +17,14 @@ const Homepage = () => {
           <Image src="/hero.png" alt="" fill className=" object-contain" />
         </div>
         {/* Text Container */}
-        <div className=" flex h-1/2 flex-col items-center justify-center gap-8 lg:h-full lg:w-1/2">
+        <div className=" flex h-1/2 flex-col items-center justify-center gap-4 lg:h-full lg:w-1/2 lg:gap-8">
           {/* Title */}
-          <h1 className=" text-4xl font-bold md:text-6xl">
+          <h1 className=" text-xl font-bold md:text-6xl">
             Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit
           </h1>
           {/* Desc */}
           <p className=" md:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-            inventore dolor dolorem itaque accusantium repellendus quidem
-            reiciendis fugiat quaerat blanditiis quo nam quos illo expedita a?
-            Libero quisquam saepe vel!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
           <div className=" flex w-full gap-4">
             <Link href="/portofolio">
