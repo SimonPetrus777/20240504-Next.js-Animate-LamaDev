@@ -17,7 +17,7 @@ const Homepage = () => {
           <Image src="/hero.png" alt="" fill className=" object-contain" />
         </div>
         {/* Text Container */}
-        <div className=" flex h-1/2 flex-col items-center justify-center gap-4 lg:h-full lg:w-1/2 lg:gap-8">
+        <div className=" flex h-1/2 flex-col items-start justify-center gap-4 lg:h-full lg:w-1/2 lg:gap-8">
           {/* Title */}
           <h1 className=" text-xl font-bold md:text-6xl">
             Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit
